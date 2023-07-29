@@ -1,0 +1,9 @@
+$ git init
+$ composer init
+Name: corexc/task
+Desc: PHP Software Engineer Challenge A
+press enter for next all steps
+-
+$ composer require phpunit/phpunit
+
+create dir /src
