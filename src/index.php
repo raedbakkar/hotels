@@ -5,18 +5,22 @@
   <title>Task</title>
   <style>
 .flex-container {
-  display: flex;
+  /* display: flex; */
   background-color: #f1f1f1;
+  text-align: -webkit-center;
 }
 
 .flex-container > div {
-  background-color: DodgerBlue;
+  
+  background-color: #0c345a;
   color: white;
-  width: 33%;
-  margin: 10px;
-  text-align: center;
+  width: 50%;
+  margin-bottom: 10px;
   font-size: 30px;
   padding: 5px;
+}
+.room{
+  margin-bottom: 10px;
 }
 small{
   font-size: 20px;
@@ -32,16 +36,12 @@ small{
 <script>
 (function() {
   var url = "./src/API/hotels.php";
-  $.getJSON( url, {
-    tags: "mount rainier",
-    tagmode: "any",
-    format: "json"
-  })
+  $.getJSON(url)
     .done(function( data ) {
       $.each( data, function( i, item ) {
         let tr = "<div class='hotel'>";
-        tr = tr + "<b>"+item.name+"</b><br><small>("+item.stars+" Stars)</small>";
-        tr = tr + "<div class='room'>"+item.rooms[0].code+"</div>";
+        tr = tr + "<b>"+item.hotel_name+": Room("+item.code+")</b><br><small>("+item.hotel_stars+" Stars)</small>";
+        tr = tr + "<div class='room'>€"+item.total+"</div>";
         tr = tr + "</div>";
         $( tr ).appendTo( "#hotels" );
         // if ( i === 3 ) {
