@@ -1,5 +1,5 @@
 {
-    "name": "corexc/task",
+    "name": "Hotels",
     "description": "PHP Software Engineer Challenge A",
     "autoload": {
         "psr-4": {

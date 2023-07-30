@@ -9,6 +9,6 @@
 `./vendor/bin/phpunit --verbose tests`
 
 # Web
-/corexc-task/
+/hotels/
 # API
-/corexc-task/src/API/hotels.php
+/hotels/src/API/hotels.php
