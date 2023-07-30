@@ -6,9 +6,10 @@
 
 `composer install`
 
-`./vendor/bin/phpunit --verbose tests`
-
 # Web
 /hotels/
 # API
 /hotels/src/API/hotels.php
+
+# Tests
+`./vendor/bin/phpunit --verbose tests`
